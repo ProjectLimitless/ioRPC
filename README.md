@@ -1,6 +1,6 @@
 # ioRPC
 
-`.NET 4.5+` `Mono`
+`.NET 4.5+` `Mono` [![Build Status](https://travis-ci.org/ProjectLimitless/ioRPC.svg?branch=master)](https://travis-ci.org/ProjectLimitless/ioRPC)
 
 A minimalistic cross-platform remote procedure call library that works over the standard input/output of processes.
 
