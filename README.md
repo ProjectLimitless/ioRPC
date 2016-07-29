@@ -13,6 +13,6 @@ When you require Inter-process communication (IPC) on .NET across Windows, Linux
 See the `Samples` folder. Contains a basic 'Server' and subprocess 'Client' that implements a basic 'Add' function.
 
 ---
-*Project Limitess*
+*A part of Project Limitless*
 
 [https://www.projectlimitless.io](https://www.projectlimitless.io)
