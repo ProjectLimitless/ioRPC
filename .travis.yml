@@ -1,2 +1,4 @@
 language: csharp
 solution: Limitless.ioRPC.sln
+script:
+	xbuild /p:Configuration=Release Limitless.ioRPC.sln /property:AssemblyFileVersion=1.0.0.$TRAVIS_BUILD_NUMBER
