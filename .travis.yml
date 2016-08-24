@@ -6,4 +6,4 @@ before_install:
 before_script:
   - nuget restore Limitless.ioRPC.sln
 after_script:
-  - nunit-console ioRPC.Test\bin\Release\ioRPC.Test.dll
+  - nunit-console ioRPC.Test/bin/Release/ioRPC.Test.dll
