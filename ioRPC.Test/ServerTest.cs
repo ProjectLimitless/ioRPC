@@ -37,6 +37,7 @@ namespace ioRPC.Test
         public void ShouldExit()
         {
             bool exited = server.ExitAndWait(0);
+            server.Dispose();
             // Check if false since process is being killed
             Assert.IsFalse(exited);
         }
