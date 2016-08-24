@@ -16,7 +16,11 @@ namespace ioRPC.Test
         public void ShouldCreateAndStartServer()
         {
             ProcessStartInfo testInfo = new ProcessStartInfo();
+#if DEBUG
             testInfo.FileName = "Samples\\bin\\Debug\\ChildClientSample.exe";
+#else
+            testInfo.FileName = "Samples\\bin\\Release\\ChildClientSample.exe";
+#endif
             server = new Server(testInfo);
             Assert.IsNotNull(server);
             server.Start();
