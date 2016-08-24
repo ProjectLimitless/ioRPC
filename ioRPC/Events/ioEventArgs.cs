@@ -36,6 +36,7 @@ namespace Limitless.ioRPC.Events
         public ioEventArgs(string commandName)
         {
             CommandName = commandName;
+            ExceptionMessage = "";
         }
     }
 }

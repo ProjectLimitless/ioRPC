@@ -44,6 +44,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ServerTest.cs" />
+    <Compile Include="ClientTest.cs" />
+    <Compile Include="ioEventArgsTest.cs" />
     <Compile Include="ioResultTest.cs" />
     <Compile Include="ioCommandTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
