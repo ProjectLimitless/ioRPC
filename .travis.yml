@@ -1,2 +1,9 @@
 language: csharp
-solution: Limitless.ioRPC.sln
+script:
+  - xbuild /p:Configuration=Release Limitless.ioRPC.sln
+before_install:
+  - sudo apt-get install nunit-console
+before_script:
+  - nuget restore Limitless.ioRPC.sln
+after_script:
+  - nunit-console ioRPC.Test\bin\Release\ioRPC.Test.dll
