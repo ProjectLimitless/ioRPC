@@ -3,6 +3,9 @@ configuration:
 - Release
 - Debug
 platform: Any CPU
+environment:
+  COVERALLS_REPO_TOKEN:
+    secure: //W45NFofQ/uvbUOP9N6vZZK9p3MHRkZDadhuEdqbBNNgmekPeehTMTqslqNmG+S
 assembly_info:
   patch: true
   file: '**\AssemblyInfo.*'
@@ -14,3 +17,5 @@ before_build:
 build:
   project: Limitless.ioRPC.sln
   verbosity: minimal
+after_test:
+- cmd: .\SubmitCoverage.bat
