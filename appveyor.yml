@@ -1,6 +1,5 @@
 version: 1.0.0.{build}
-configuration:
-- Release
+configuration: Release
 platform: Any CPU
 environment:
   COVERALLS_REPO_TOKEN:
@@ -16,6 +15,7 @@ before_build:
 build:
   project: Limitless.ioRPC.sln
   verbosity: minimal
-after_test:
+test_script:
 - cmd: .\RunTestsWithCoverage.bat
+after_test:
 - cmd: .\SubmitCoverage.bat
