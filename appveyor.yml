@@ -18,4 +18,5 @@ build:
   project: Limitless.ioRPC.sln
   verbosity: minimal
 after_test:
+- cmd: .\RunTestsWithCoverage.bat
 - cmd: .\SubmitCoverage.bat
