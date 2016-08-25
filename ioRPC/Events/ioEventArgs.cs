@@ -8,7 +8,7 @@
  * it under the terms of the Apache License Version 2.0.
  * 
  * You should have received a copy of the Apache License Version 2.0 with
- * ioRPC. If not, see <http://www.apache.org/licenses/LICENSE-2.0>.
+ * ioRPC. If not, see http://www.apache.org/licenses/LICENSE-2.0.
  */
 
 using System;

@@ -1,11 +1,23 @@
-﻿using Limitless.ioRPC;
-using Limitless.ioRPC.Structs;
-using NUnit.Framework;
+﻿/** 
+ * This file is part of ioRPC.
+ * Copyright © 2016 Donovan Solms.
+ * Project Limitless
+ * https://www.projectlimitless.io
+ * 
+ * ioRPC and Project Limitless is free software: you can redistribute it and/or modify
+ * it under the terms of the Apache License Version 2.0.
+ * 
+ * You should have received a copy of the Apache License Version 2.0 with
+ * ioRPC. If not, see http://www.apache.org/licenses/LICENSE-2.0.
+ */
 using System;
-using System.Collections.Generic;
-using System.Diagnostics;
 using System.IO;
 using System.Threading;
+using System.Diagnostics;
+using System.Collections.Generic;
+using NUnit.Framework;
+using Limitless.ioRPC;
+using Limitless.ioRPC.Structs;
 
 namespace ioRPC.Test
 {
