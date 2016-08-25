@@ -130,10 +130,6 @@ namespace Limitless.ioRPC
                 eventArgs.Data = rpcResult.Data;
                 OnCommandResultReceived(eventArgs);
             }
-            else
-            {
-                Console.WriteLine("Received unknown data from process: {0}", e.Data);
-            }
         }
 
         /// <summary>

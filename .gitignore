@@ -196,3 +196,7 @@ FakesAssemblies/
 *.opt
 /.project
 Reports/
+
+# Coverity reports
+cov-int/
+cov-int/*

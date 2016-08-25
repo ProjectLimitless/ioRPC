@@ -2,8 +2,10 @@
 using Limitless.ioRPC.Structs;
 using NUnit.Framework;
 using System;
+using System.Collections.Generic;
 using System.Diagnostics;
 using System.IO;
+using System.Threading;
 
 namespace ioRPC.Test
 {
@@ -29,8 +31,12 @@ namespace ioRPC.Test
         [Test]
         public void ShouldExecuteCommand()
         {
-            ioCommand command = new ioCommand("Test");
+            List<object> parameters = new List<object>();
+            parameters.Add(1);
+            parameters.Add(3);
+            ioCommand command = new ioCommand("Add", parameters);
             server.Execute(command);
+            // Not testing events raised
         }
 
         [Test]
