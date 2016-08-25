@@ -19,3 +19,9 @@ test_script:
 - cmd: .\RunTestsWithCoverage.bat
 after_test:
 - cmd: .\SubmitCoverage.bat
+deploy:
+  provider: NuGet
+  api_key:
+    secure: KUErWzVwCTSQGNq3l8KJpwyBCK/2Hx5H+L9ayvPVYV6R6hYx+jqrjBMf/4tvJkmt
+  skip_symbols: false
+  artifact: /.*\.nupkg/
