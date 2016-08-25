@@ -14,6 +14,7 @@ before_build:
 - cmd: nuget restore
 build:
   project: Limitless.ioRPC.sln
+  publish_nuget: true
   verbosity: minimal
 test_script:
 - cmd: .\RunTestsWithCoverage.bat
