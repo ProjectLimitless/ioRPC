@@ -16,4 +16,7 @@
     <copyright>Copyright 2016 Donovan Solms</copyright>
     <tags>stdio rpc</tags>
   </metadata>
+  <files>
+    <file src="bin\Release\Limitless.ioRPC.xml" target="lib\net45" />
+  </files>
 </package>
