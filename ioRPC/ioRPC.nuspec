@@ -6,10 +6,13 @@
     <title>$title$</title>
     <authors>$author$</authors>
     <owners>$author$</owners>
+    <iconUrl>https://www.projectlimitless.io/i/Project-Limitless-Logo-Only-64x64.png</iconUrl>
     <licenseUrl>https://github.com/ProjectLimitless/ioRPC/blob/master/LICENSE</licenseUrl>
     <projectUrl>https://github.com/ProjectLimitless/ioRPC</projectUrl>
     <requireLicenseAcceptance>true</requireLicenseAcceptance>
     <description>$description$</description>
+    <summary>$description$</summary>
+    <releaseNotes>$description$</releaseNotes>
     <copyright>Copyright 2016 Donovan Solms</copyright>
     <tags>stdio rpc</tags>
   </metadata>
