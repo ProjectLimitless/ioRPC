@@ -1,6 +1,6 @@
 # ioRPC
 
-`.NET 4.5+` [![Build status](https://ci.appveyor.com/api/projects/status/3okbwy9pncwgvs3a?svg=true)](https://ci.appveyor.com/project/donovansolms/iorpc) `Mono` [![Build Status](https://travis-ci.org/ProjectLimitless/ioRPC.svg?branch=master)](https://travis-ci.org/ProjectLimitless/ioRPC)
+[![Build status](https://www.projectlimitless.io/badger/iorpc/badge)](https://www.projectlimitless.io/badger/iorpc)
 
 [![Coverage Status](https://coveralls.io/repos/github/ProjectLimitless/ioRPC/badge.svg?branch=master)](https://coveralls.io/github/ProjectLimitless/ioRPC?branch=master)
 [![Coverity status](https://scan.coverity.com/projects/9992/badge.svg)](https://scan.coverity.com/projects/projectlimitless-iorpc)
@@ -21,4 +21,3 @@ See the `Samples` folder. Contains a basic 'Server' and subprocess 'Client' that
 [![Project Limitless](https://www.donovansolms.com/downloads/projectlimitless.jpg)](https://www.projectlimitless.io)
 
 [https://www.projectlimitless.io](https://www.projectlimitless.io)
-
