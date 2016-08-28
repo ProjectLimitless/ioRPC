@@ -1,6 +1,6 @@
 # ioRPC
 
-[![Build status](https://www.projectlimitless.io/badger/iorpc/badge)](https://www.projectlimitless.io/badger/iorpc)
+[![Build status](https://www.projectlimitless.io/badger/iorpc/badge?1)](https://www.projectlimitless.io/badger/iorpc)
 
 [![Coverage Status](https://coveralls.io/repos/github/ProjectLimitless/ioRPC/badge.svg?branch=master)](https://coveralls.io/github/ProjectLimitless/ioRPC?branch=master)
 [![Coverity status](https://scan.coverity.com/projects/9992/badge.svg)](https://scan.coverity.com/projects/projectlimitless-iorpc)
