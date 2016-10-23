@@ -38,7 +38,7 @@ namespace ServerSample
                 Console.WriteLine("[SampleServer] Server Started...");
                 Thread.Sleep(1000);
 
-                Console.WriteLine("[SampleServer] Executing async Add...");
+                Console.WriteLine("[SampleServer] Executing async Add - will return in 5 seconds...");
                 ioCommand asyncAdd = new ioCommand("AsyncAdd");
                 asyncAdd.Parameters.Add(10);
                 asyncAdd.Parameters.Add(8);
