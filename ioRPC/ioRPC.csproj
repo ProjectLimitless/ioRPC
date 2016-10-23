@@ -44,6 +44,7 @@
   <ItemGroup>
     <Compile Include="Client.cs" />
     <Compile Include="Events\ioEventArgs.cs" />
+    <Compile Include="Interfaces\IRPCAsyncHandler.cs" />
     <Compile Include="Server.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Structs\ioResult.cs" />

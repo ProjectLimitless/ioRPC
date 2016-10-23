@@ -14,6 +14,7 @@
 using System;
 using System.Reflection;
 using Limitless.ioRPC.Structs;
+using Limitless.ioRPC.Interfaces;
 
 namespace Limitless.ioRPC
 {
@@ -45,6 +46,39 @@ namespace Limitless.ioRPC
         public Client(object handler)
         {
             rpcHandler = handler;
+        }
+
+        /// <summary>
+        /// Creates a new instance of the ioRPC client.
+        /// </summary>
+        /// <param name="handler">The instance to handle RPC calls</param>
+        public Client(IRPCAsyncHandler handler)
+        {
+            handler.SetAsyncCallback(this.AsyncCallback);
+            rpcHandler = handler;
+        }
+
+        /// <summary>
+        /// Handles the async results.
+        /// </summary>
+        /// <param name="commandName">The command this the result for</param>
+        /// <param name="asyncResult"></param>
+        public void AsyncCallback(string commandName, object asyncResult)
+        {
+            ioResult result = new ioResult(commandName);
+            result.Data = asyncResult;
+            if (result != null)
+            {
+                string resultXml = result.Serialize();
+                if (result.ExceptionMessage != string.Empty)
+                {
+                    WriteError(resultXml);
+                }
+                else
+                {
+                    Write(resultXml);
+                }
+            }
         }
 
         /// <summary>

@@ -34,7 +34,16 @@ namespace ServerSample
                 ioServer.CommandResultReceived += Iorpc_CommandResultReceived;
                 ioServer.CommandExceptionReceived += Iorpc_CommandExceptionReceived;
                 ioServer.Start();
-                
+
+                Console.WriteLine("[SampleServer] Server Started...");
+                Thread.Sleep(1000);
+
+                Console.WriteLine("[SampleServer] Executing async Add...");
+                ioCommand asyncAdd = new ioCommand("AsyncAdd");
+                asyncAdd.Parameters.Add(10);
+                asyncAdd.Parameters.Add(8);
+                ioServer.Execute(asyncAdd);
+
                 while (Console.KeyAvailable == false)
                 {
                     Console.WriteLine("[SampleServer] Server Running...");
@@ -59,7 +68,14 @@ namespace ServerSample
 
         private static void Iorpc_CommandResultReceived(object sender, Limitless.ioRPC.Events.ioEventArgs e)
         {
-            Console.WriteLine("[SampleServer] Received RPC Call Result: fn({0}) {1}", e.CommandName, e.Data);
+            if (e.Data == null)
+            {
+                Console.WriteLine("[SampleServer] Received RPC Call Result: fn({0}) {1}", e.CommandName, "(void)");
+            }
+            else
+            {
+                Console.WriteLine("[SampleServer] Received RPC Call Result: fn({0}) {1}", e.CommandName, e.Data);
+            }
         }
 
         private static void Iorpc_Exited(object sender, EventArgs e)

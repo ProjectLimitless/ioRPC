@@ -1,5 +1,6 @@
 ﻿using System;
 using Limitless.ioRPC;
+using Limitless.ioRPC.Interfaces;
 
 namespace ChildClientSample
 {
@@ -7,7 +8,7 @@ namespace ChildClientSample
     {
         static void Main(string[] args)
         {
-            Calculator calc = new Calculator();
+            IRPCAsyncHandler calc = new Calculator();
             Client client = new Client(calc);
             client.Exiting += Client_Exiting;
             client.Listen();

@@ -14,6 +14,7 @@ using System;
 using System.IO;
 using NUnit.Framework;
 using Limitless.ioRPC;
+using Limitless.ioRPC.Interfaces;
 
 namespace ioRPC.Test
 {
@@ -25,10 +26,26 @@ namespace ioRPC.Test
         }
     }
 
+    class AsyncMockHandler : IRPCAsyncHandler
+    {
+        public Action<string, object> asyncCallback;
+
+        public void AsyncTestHandler()
+        {
+
+        }
+
+        public void SetAsyncCallback(Action<string, object> asyncCallback)
+        {
+            this.asyncCallback = asyncCallback;
+        }
+    }
+
     [TestFixture]
     public class ClientTest
     {
         Client client;
+        Client asyncClient;
 
         [Test]
         public void ShouldCreateClient()
@@ -38,6 +55,14 @@ namespace ioRPC.Test
             Assert.IsNotNull(client);
         }
 
+        [Test]
+        public void ShouldCreateAsyncClient()
+        {
+            IRPCAsyncHandler asyncHandler = new AsyncMockHandler();
+            asyncClient = new Client(asyncHandler);
+            Assert.IsNotNull(asyncClient);
+        }
+        
         [Test]
         public void ShouldWrite()
         {
